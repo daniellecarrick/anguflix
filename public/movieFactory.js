@@ -11,10 +11,7 @@ app.factory('movieFactory', function(){
     year: 1991,
     description: "this is a sample description",
     image: "http://lorempixel.com/400/300/cats/"
-  }
-  ];
-
-  var collection = [
+  },
   {
     name: "Collection",
     year: 1990,
@@ -28,6 +25,8 @@ app.factory('movieFactory', function(){
     image: "http://lorempixel.com/400/300/cats/"
   }
   ];
+
+  var collection = [];
   return {
     movies: movies,
     collection: collection

@@ -9,7 +9,7 @@
   <body ng-app="movieApp">
   <div class="container" ng-controller="movieController">
     <div class="row">
-      <div class="col-xs-12">
+      <div>
       <h1>Anguflix</h1>
           <form>
             <div class="col-xs-6">
@@ -29,9 +29,10 @@
       </div>
       <hr>
       <div class="row">
-        <div class="col-xs-12">
+        <div>
           <div class="mycollection">
           <h1>My Collection</h1>
+          <p ng-if="collection.length == 0">Click a movie below to add it to the collection.</p>
             <div ng-repeat="movie in collection">
                 <div class="col-xs-4">
                   <div class="movie" ng-click="removeFromCollection(movie)">
@@ -46,7 +47,7 @@
       </div>
       <hr>
       <div class="row">
-        <div class="col-xs-12">
+        <div>
           <div class="allmovies">
           <h1>All Movies</h1>
             <div ng-repeat="movie in movies | filter:searchText">
